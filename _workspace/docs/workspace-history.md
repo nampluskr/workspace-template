@@ -26,6 +26,7 @@
 | 2026-06-05 | 4차 | 주제 분류 체계(subject-classification.md) 도입 |
 | 2026-06-05 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
 | 2026-06-05 | 6차 | 문서 중복/충돌 해소, 메타정보 태그→주제 전환, project-init 명령어 개선 |
+| 2026-06-06 | 7차 | project-update 명령어 추가, 전체 명령어 문서 문체 통일, 문서 작성 규칙 CLAUDE.md/AGENTS.md 이동 |
 
 ---
 
@@ -227,3 +228,39 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 메타정보 `태그` 폐기 | subject 전체명(영어)을 값으로 하는 `주제` 항목으로 전환 |
 | `subject-classification.md` 파일명 | `subjects.md`, `subject-list.md` 검토 후 현행 유지 결정 |
 | CLAUDE.md / AGENTS.md 동기화 | 내용 완전 동일 유지 (AI CLI 공통 지침이므로 CLI 전용 분기 없음) |
+
+---
+
+### 2.7 7차 세션 — project-update 명령어 추가 및 문서 문체 통일
+
+**배경**
+
+프로젝트 진행 중 단편적인 수정 사항을 자유롭게 반영하는 명령어(`project-update`)가 필요하다는 요청이 있었다. 기존 `project-init`은 순서대로 정보를 수집하는 마법사 형태로 진행 중 수정에 적합하지 않았다. 또한 `_workspace/commands/` 내 모든 명령어 파일의 문체가 `writing-style.md` 규칙(`~한다`, `~이다`)과 맞지 않아 일괄 수정하였다. 문서 작성 규칙(문체)을 `CLAUDE.md` / `AGENTS.md` 최상위 지침으로 이동하였다.
+
+**신규 생성 파일**
+
+| 파일 | 내용 |
+| --- | --- |
+| `_workspace/commands/project-update.md` | 자유 형식 입력으로 PROJECT.md / TASKS.md / README.md 선택적 갱신 |
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `_workspace/commands/commit-message.md` | 문체 통일 (`~합니다` → `~한다`) |
+| `_workspace/commands/project-init.md` | 문체 통일 |
+| `_workspace/commands/session-start.md` | 문체 통일 |
+| `_workspace/commands/session-end.md` | 문체 통일 |
+| `_workspace/commands/session-handoff.md` | 문체 통일 |
+| `_workspace/docs/workspace-guide.md` | §5 커스텀 명령어 테이블에 `project-update` 행 추가 |
+| `CLAUDE.md` | §9 문서 작성 규칙 신규 추가 (문체 3개 항목), 기존 §9→§10 으로 번호 변경, 목차 갱신 |
+| `AGENTS.md` | 동일 내용으로 동기화 |
+| `_workspace/rules/writing-style.md` | §4.3 문체에 `CLAUDE.md` / `AGENTS.md §9` 참조 문구 추가 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 신규 명령어명 | `project-update` (`project-edit`, `project-patch` 검토 후 확정) |
+| project-update 동작 방식 | 자유 형식 입력 → 의도 파악 → 단순 추가는 즉시 반영, 삭제·구조 변경은 확인 후 반영 |
+| 문체 규칙 위치 | `writing-style.md` 에서 `CLAUDE.md` / `AGENTS.md §9` 로 이동, writing-style.md 는 참조 |
