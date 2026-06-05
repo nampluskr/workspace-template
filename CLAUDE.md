@@ -11,7 +11,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: DEV, workspace, ai-cli, guide
+> 주제: Development Environment and Tools
 
 ---
 
@@ -81,7 +81,7 @@ project-root/
 | 폴더 | 역할 | 비고 |
 |------|------|------|
 | `_workspace/` | 워크스페이스 운영 문서 및 세션 기록 | |
-| `_workspace/commands/` | 커스텀 명령어 정의 파일 | `/{파일명}` 형식으로 호출 |
+| `_workspace/commands/` | 커스텀 명령어 정의 파일 | `{파일명} 실행` 또는 `@{파일명.md} 실행` 형식으로 호출 |
 | `_workspace/rules/` | 워크스페이스 공통 규칙 파일 | 문서 작성 스타일 등 |
 | `_assets/` | 읽기 전용 입력 보관소 | 참조만 가능, 수정/가공 금지 |
 | `scripts/` | 실행 스크립트 및 Python 파일 | 문서 생성 스크립트 포함 |
@@ -167,6 +167,7 @@ project-init 실행
 ```
 
 현재 등록된 커스텀 명령어 목록은 `_workspace/commands/` 폴더를 확인한다.
+명령어별 상세 설명은 `_workspace/docs/workspace-guide.md` §5 를 참조한다.
 
 > 다른 AI CLI 사용 시에도 동일하게 적용된다.
 > `_workspace/commands/` 폴더의 파일명과 내용을 참조하여 동일한 방식으로 명령어를 처리한다.

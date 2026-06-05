@@ -4,7 +4,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: DEV, workspace, study, research
+> 주제: {Subject Name}
 
 ---
 
@@ -28,19 +28,9 @@
 
 ## 2 주제 분류
 
-| Code | Subject |
-|------|---------|
-| `MATH` | Mathematics |
-| `PHYS` | Physics |
-| `NA` | Numerical Analysis |
-| `ML` | Machine Learning |
-| `CV` | Computer Vision |
-| `NLP` | Natural Language Processing |
-| `CS` | Computer Science |
-| `DEV` | Development Environment and Tools |
-| `MISC` | Miscellaneous |
+MATH, PHYS, NA, ML, CV, NLP, CS, DEV, MISC 의 subject code 를 기준으로 분류한다.
 
-분류 세부 항목은 [_workspace/rules/subject-classification.md](_workspace/rules/subject-classification.md) 를 참조한다.
+분류 목록 및 세부 항목은 [_workspace/rules/subject-classification.md](_workspace/rules/subject-classification.md) 를 참조한다.
 
 ---
 

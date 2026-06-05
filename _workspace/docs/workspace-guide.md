@@ -4,7 +4,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05 (README.md, PROJECT.md 적용 범위 추가)
-> 태그: workspace, guide, template, ai-cli, subject-classification
+> 주제: Development Environment and Tools
 
 ---
 
@@ -155,28 +155,7 @@ docs/
 ## 7 주제 분류 체계
 
 워크스페이스에서 작성하는 문서, 스크립트, 산출물은 공통 subject 분류를 기준으로 분류한다.
-분류 기준의 전체 목록과 세부 항목은 `_workspace/rules/subject-classification.md` 에서 관리한다.
-
-현재 정의된 subject code는 다음과 같다.
-
-| Code | Subject |
-|---|---|
-| `MATH` | Mathematics |
-| `PHYS` | Physics |
-| `NA` | Numerical Analysis |
-| `ML` | Machine Learning |
-| `CV` | Computer Vision |
-| `NLP` | Natural Language Processing |
-| `CS` | Computer Science |
-| `DEV` | Development Environment and Tools |
-| `MISC` | Miscellaneous |
-
-Subject code는 다음 방식으로 활용한다.
-
-- 문서 메타정보 태그에 subject code를 첫 번째 태그로 포함한다. 예: `태그: ML, classification, pytorch`
-- 폴더명이나 파일명에 접두사로 사용하여 주제를 명시할 수 있다. 예: `ml-classification/`, `nlp_tokenizer.md`
-- 여러 subject에 걸치는 경우 해당 code를 모두 포함한다. 예: `태그: MATH, ML, optimization`
-- 어느 subject에도 속하지 않는 경우 `MISC` 를 사용한다.
+분류 목록, 세부 항목, 활용 방법은 `_workspace/rules/subject-classification.md` 를 참조한다.
 
 ## 8 사용 시 주의사항
 

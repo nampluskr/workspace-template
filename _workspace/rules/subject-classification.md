@@ -5,7 +5,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: subject, classification, taxonomy
+> 주제: Development Environment and Tools
 
 ---
 

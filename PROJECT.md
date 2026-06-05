@@ -4,7 +4,7 @@
 
 > 생성일: YYYY-MM-DD
 > 수정일: YYYY-MM-DD
-> 태그: {subject-code}, {tag1}, {tag2}
+> 주제: {Subject Name}
 
 ---
 

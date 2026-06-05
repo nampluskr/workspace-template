@@ -5,7 +5,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: DEV, workspace, history, changelog
+> 주제: Development Environment and Tools
 
 ---
 
@@ -25,6 +25,7 @@
 | 2026-06-05 | 3차 | writing-style.md 개선 및 coding-style.md 분리 |
 | 2026-06-05 | 4차 | 주제 분류 체계(subject-classification.md) 도입 |
 | 2026-06-05 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
+| 2026-06-05 | 6차 | 문서 중복/충돌 해소, 메타정보 태그→주제 전환, project-init 명령어 개선 |
 
 ---
 
@@ -192,3 +193,37 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | session-start/end 네이밍 | `session-init/close` 대신 `session-start/end` 채택 (대칭성 및 반복 호출 적합성) |
 | session-end 수행 범위 | TASKS.md 업데이트 → workspace-history.md 갱신 → session-handoff 순으로 확정 |
 | project-init 출력 순서 | PROJECT.md → TASKS.md → README.md 순으로 확정 |
+
+---
+
+### 2.6 6차 세션 — 문서 중복/충돌 해소 및 메타정보 태그→주제 전환
+
+> 참조: `_workspace/sessions/260605-HHMMSS_session-handoff.md`
+
+**배경**
+
+루트 필수 파일과 `_workspace/` 내 문서 간 중복 내용 및 충돌을 점검하고, 상위 문서가 하위 문서를 참조하는 구조로 정비했다. 또한 메타정보 블록의 `태그` 항목을 subject 전체명 기반의 `주제` 항목으로 전환했다.
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `CLAUDE.md` | §3.2 커스텀 명령어 호출 방식 구버전 수정, `workspace-guide.md §5` 참조 추가, 메타정보 `주제` 전환 |
+| `AGENTS.md` | 동일 내용으로 완전 동기화 (목차 형식 통일, 호출 방식 수정, `주제` 전환) |
+| `README.md` | Subject code 표 제거 → `subject-classification.md` 참조로 교체, 목차 번호 목록으로 수정, `주제` 전환 |
+| `PROJECT.md` | 메타정보 `태그` → `주제` 전환 |
+| `_workspace/docs/workspace-guide.md` | §7 Subject code 표 제거 → `subject-classification.md` 참조로 교체, `주제` 전환 |
+| `_workspace/rules/writing-style.md` | 메타정보 블록 예시 및 설명을 `태그` → `주제` (subject 전체명)로 전환 |
+| `_workspace/rules/coding-style.md` | 메타정보 `주제` 전환 |
+| `_workspace/rules/subject-classification.md` | 메타정보 `주제` 전환 |
+| `_workspace/commands/project-init.md` | 진행 단계 AI 초안 제시 방식으로 변경, Task AI 자동 작성으로 변경, 폴더 구조 확인/생성 절차 추가 (파일 작성 전 단계로 이동), PROJECT.md 템플릿 `주제` 전환 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 중복 제거 방식 | Subject code 표는 `subject-classification.md` 단일 출처로 통합, 상위 문서는 참조만 |
+| 커스텀 명령어 상세 설명 위치 | `workspace-guide.md §5` 단일 출처, CLAUDE.md/AGENTS.md 는 참조 링크만 |
+| 메타정보 `태그` 폐기 | subject 전체명(영어)을 값으로 하는 `주제` 항목으로 전환 |
+| `subject-classification.md` 파일명 | `subjects.md`, `subject-list.md` 검토 후 현행 유지 결정 |
+| CLAUDE.md / AGENTS.md 동기화 | 내용 완전 동일 유지 (AI CLI 공통 지침이므로 CLI 전용 분기 없음) |

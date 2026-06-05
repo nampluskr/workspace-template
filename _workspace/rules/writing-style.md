@@ -4,7 +4,7 @@
 
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: writing-style, convention, guide, documentation
+> 주제: Development Environment and Tools
 
 ---
 
@@ -62,7 +62,7 @@
 
 > 생성일: YYYY-MM-DD
 > 수정일: YYYY-MM-DD
-> 태그: tag1, tag2, tag3
+> 주제: Subject Name
 
 ---
 
@@ -89,14 +89,14 @@
 ```markdown
 > 생성일: 2026-06-05
 > 수정일: 2026-06-05
-> 태그: keyword1, keyword2
+> 주제: Subject Name
 ```
 
 각 항목의 규칙은 다음과 같다.
 
 - `생성일`: 문서 최초 작성일이며 이후 변경하지 않는다
 - `수정일`: 내용 변경 시마다 갱신한다
-- `태그`: 쉼표로 구분하며, 소문자 영어 또는 한국어 혼용이 가능하고 하이픈으로 단어를 연결한다
+- `주제`: `_workspace/rules/subject-classification.md` 의 Subject 전체명을 사용한다. 복수 주제는 쉼표로 구분한다
 
 ### 2.3 요약
 
