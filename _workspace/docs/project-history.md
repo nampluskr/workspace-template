@@ -1,10 +1,10 @@
-# 워크스페이스 변경 이력
+# 프로젝트 작업 이력
 
-이 문서는 워크스페이스 템플릿의 설계 변경 및 주요 결정사항을 시간 순서로 기록한다.
-각 항목은 세션 핸드오프 문서를 기반으로 작성하며, 향후 설계 방향 파악과 의사결정 근거 추적에 활용한다.
+이 문서는 프로젝트의 세션별 작업 내역과 주요 결정사항을 시간 순서로 기록한다.
+각 항목은 세션 핸드오프 문서를 기반으로 작성하며, 향후 작업 맥락 파악과 의사결정 근거 추적에 활용한다.
 
-> 생성일: 2026-06-05
-> 수정일: 2026-06-05
+> 생성일시: 260605-220755
+> 수정일시: 260606-074638
 > 주제: Development Environment and Tools
 
 ---
@@ -18,16 +18,17 @@
 
 ## 1. 변경 이력 요약
 
-| 날짜 | 세션 | 주요 변경 내용 |
-| --- | --- | --- |
-| 2026-06-05 | 1차 | 워크스페이스 템플릿 최초 설계 및 필수 파일 생성 |
-| 2026-06-05 | 2차 | 워크스페이스 가이드 문서 신규 작성 및 AI CLI 지침 파일 정비 |
-| 2026-06-05 | 3차 | writing-style.md 개선 및 coding-style.md 분리 |
-| 2026-06-05 | 4차 | 주제 분류 체계(subject-classification.md) 도입 |
-| 2026-06-05 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
-| 2026-06-05 | 6차 | 문서 중복/충돌 해소, 메타정보 태그→주제 전환, project-init 명령어 개선 |
-| 2026-06-06 | 7차 | project-update 명령어 추가, 전체 명령어 문서 문체 통일, 문서 작성 규칙 CLAUDE.md/AGENTS.md 이동 |
-| 2026-06-06 | 8차 | 섹션 번호 형식 변경(점 추가), 세션 핸드오프 파일명 오류 수정, session-end/handoff 파일명 지침 추가 |
+| 날짜 | 시각 | 세션 | 주요 변경 내용 |
+| --- | --- | --- | --- |
+| 260605 | 195326 | 1차 | 워크스페이스 템플릿 최초 설계 및 필수 파일 생성 |
+| 260605 | 202038 | 2차 | 워크스페이스 가이드 문서 신규 작성 및 AI CLI 지침 파일 정비 |
+| 260605 | 220755 | 3차 | writing-style.md 개선 및 coding-style.md 분리 |
+| 260605 | 220755 | 4차 | 주제 분류 체계(subject-classification.md) 도입 |
+| 260605 | 225433 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
+| 260605 | 233851 | 6차 | 문서 중복/충돌 해소, 메타정보 태그→주제 전환, project-init 명령어 개선 |
+| 260606 | 001837 | 7차 | project-update 명령어 추가, 전체 명령어 문서 문체 통일, 문서 작성 규칙 CLAUDE.md/AGENTS.md 이동 |
+| 260606 | 072548 | 8차 | 섹션 번호 형식 변경(점 추가), 세션 핸드오프 파일명 오류 수정, session-end/handoff 파일명 지침 추가 |
+| 260606 | 075523 | 9차 | 메타정보 형식 변경(생성일시/수정일시, YYMMDD-HHMMSS), workspace-guide §5 SSOT 미채택 이유 추가, project-history §1 시각 컬럼 추가 |
 
 ---
 
@@ -295,3 +296,30 @@ LaTeX/ACM/Springer 계열 관용에 맞춰 섹션 번호 형식을 통일하고,
 | 섹션 번호 형식 | LaTeX/ACM/Springer 계열 관용 적용 — H2: `1.`, H3: `1.1.`, H4/Stage/Phase: 점 없음 |
 | 세션 파일명 시각 기준 | 커밋 시각 기준으로 rename (`date +%y%m%d-%H%M%S` 실행 후 사용) |
 | CLAUDE.md/AGENTS.md 동기화 | SSOT 방식(공통 파일 참조) 불채택 — 자동 컨텍스트 로드 필수 조건으로 현행 수동 복사 유지 |
+
+---
+
+### 2.9. 9차 세션 — 메타정보 형식 변경 및 문서 정비
+
+> 참조: `_workspace/sessions/260606-075523_session-handoff.md`
+
+**배경**
+
+메타정보 날짜 표기를 워크스페이스 공식 형식인 `YYMMDD-HHMMSS`로 통일하고, CLAUDE.md/AGENTS.md SSOT 방식 미채택 근거를 workspace-guide §5에 명시하였다. project-history §1 변경 이력 요약 테이블에 시각 컬럼을 추가하였다.
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| 전체 `.md` 파일 | 메타정보 필드명 `생성일/수정일` → `생성일시/수정일시`, 날짜 형식 `YYYYMMDD` → `YYMMDD` |
+| `_workspace/rules/writing-style.md` | §3.2 날짜 형식 규칙 업데이트, §2.1·§2.2 예시 코드블록 형식 반영 |
+| `_workspace/docs/workspace-guide.md` | §5에 CLAUDE.md/AGENTS.md 공통 파일 미사용 이유 단락 추가, 메타정보 형식 업데이트 |
+| `_workspace/docs/project-history.md` | §1 변경 이력 요약 테이블에 시각 컬럼 추가 (HHMMSS) |
+| `_workspace/commands/session-end.md` | Step 3 테이블 작성 형식 `YYYY-MM-DD` → `YYMMDD \| HHMMSS` |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 메타정보 날짜 형식 | `YYMMDD-HHMMSS` 공식 형식 확정 (기존 파일은 git 커밋 시각 기준 소급 변환) |
+| CLAUDE.md/AGENTS.md SSOT 미채택 근거 | workspace-guide §5에 명시 — 외부 파일 참조 시 자동 컨텍스트 로드 불보장 |

@@ -30,7 +30,7 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 ```markdown
 # [주제] 세션 핸드오프
 
-> 작성일: YYYY-MM-DD
+> 작성일시: YYMMDD-HHMMSS
 > 세션 목적: (한 줄로)
 > 이전 핸드오프: {파일명, 없으면 이 줄 생략}
 

@@ -1,6 +1,6 @@
 # project-update 명령어 추가 및 문서 문체 통일 세션 핸드오프
 
-> 작성일: 2026-06-06
+> 작성일시: 260606-001837
 > 세션 목적: project-update 명령어 신규 추가, 명령어 문서 문체 통일, 문서 작성 규칙 이동
 > 이전 핸드오프: `_workspace/sessions/260605-225230_session-handoff.md`
 

@@ -1,6 +1,6 @@
 # 커스텀 명령어 체계 정비 세션 핸드오프
 
-> 작성일: 2026-06-05
+> 작성일시: 260605-225433
 > 세션 목적: 커스텀 명령어 호출 방식 변경 및 session-start/end/project-init 명령어 추가
 > 이전 핸드오프: `_workspace/sessions/260605-215637_session-handoff.md`
 

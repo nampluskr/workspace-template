@@ -141,8 +141,8 @@ project-root/
 
 {한 줄 설명}
 
-> 생성일: YYYY-MM-DD
-> 수정일: YYYY-MM-DD
+> 생성일시: YYMMDD-HHMMSS
+> 수정일시: YYMMDD-HHMMSS
 > 주제: {Subject Name}
 
 ---

@@ -9,8 +9,8 @@
 - Gemini: GEMINI.md
 - RooCode: ROO.md
 
-> 생성일: 2026-06-05
-> 수정일: 2026-06-05
+> 생성일시: 260605-195326
+> 수정일시: 260606-074638
 > 주제: Development Environment and Tools
 
 ---
