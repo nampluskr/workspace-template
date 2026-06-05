@@ -1,6 +1,6 @@
-# 커스텀 명령어: `/commit-message`
+# 커스텀 명령어: `commit-message`
 
-사용자가 "커밋 메시지", "commit-message", "/commit-message" 라고 요청하면 아래 절차를 실행합니다.
+사용자가 `commit-message 실행` 또는 `@commit-message.md 실행` 이라고 요청하면 아래 절차를 실행합니다.
 커밋은 사용자가 직접 수행합니다. AI CLI 는 메시지만 제안합니다.
 
 ---

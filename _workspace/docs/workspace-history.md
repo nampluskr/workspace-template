@@ -24,6 +24,7 @@
 | 2026-06-05 | 2차 | 워크스페이스 가이드 문서 신규 작성 및 AI CLI 지침 파일 정비 |
 | 2026-06-05 | 3차 | writing-style.md 개선 및 coding-style.md 분리 |
 | 2026-06-05 | 4차 | 주제 분류 체계(subject-classification.md) 도입 |
+| 2026-06-05 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
 
 ---
 
@@ -155,3 +156,39 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 세부 항목 형식 | 체크박스 없는 일반 목록 (예시 성격) |
 | 태그 위치 | subject code를 태그 첫 번째 위치에 배치 |
 | 세부 항목 언어 | 전체 영어 (한국어 항목 "pi 계산", "카오스와 프랙탈"을 영어로 수정) |
+
+---
+
+### 2.5 5차 세션 — 커스텀 명령어 체계 정비 및 신규 명령어 추가
+
+**배경**
+
+커스텀 명령어 호출 방식이 `/{파일명}` 슬래시 형식으로 정의되어 있었으나 Claude Code 내장 슬래시 명령어 시스템과 충돌하여 동작하지 않았다. 호출 방식을 `{파일명} 실행` 또는 `@{파일명.md} 실행` 으로 변경하고, 세션 시작/종료 및 프로젝트 초기화 명령어를 신규 추가하였다.
+
+**신규 생성 파일**
+
+| 파일 | 내용 |
+| --- | --- |
+| `_workspace/commands/session-start.md` | 세션 시작 브리핑 명령어 — PROJECT.md / TASKS.md / 직전 핸드오프 읽기 후 현황 요약 출력 |
+| `_workspace/commands/session-end.md` | 세션 종료 절차 명령어 — TASKS.md 업데이트, workspace-history.md 갱신, session-handoff 실행 |
+| `_workspace/commands/project-init.md` | 프로젝트 초기화 명령어 — 대화형으로 정보 수집 후 PROJECT.md → TASKS.md → README.md 작성/갱신 |
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `CLAUDE.md` | 섹션 9 커스텀 명령어 호출 방식 변경 및 2가지 호출 방법 명시 |
+| `README.md` | 연구/학습 워크스페이스 기준으로 재작성 (개요, 주제 분류, 디렉토리 구조) |
+| `_workspace/commands/commit-message.md` | 제목 및 호출 설명에서 슬래시(`/`) 제거 |
+| `_workspace/commands/session-handoff.md` | 제목 및 호출 설명에서 슬래시(`/`) 제거 |
+| `_workspace/docs/workspace-guide.md` | 섹션 5에 커스텀 명령어 호출 방법 2가지 및 명령어 5개 테이블 추가 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 커스텀 명령어 호출 방식 | `/{파일명}` 폐기 → `{파일명} 실행` 또는 `@{파일명.md} 실행` 2가지로 확정 |
+| 명령어 파일명 유지 | `commit-message`, `session-handoff` 현행 유지 (변경 검토 후 결정) |
+| session-start/end 네이밍 | `session-init/close` 대신 `session-start/end` 채택 (대칭성 및 반복 호출 적합성) |
+| session-end 수행 범위 | TASKS.md 업데이트 → workspace-history.md 갱신 → session-handoff 순으로 확정 |
+| project-init 출력 순서 | PROJECT.md → TASKS.md → README.md 순으로 확정 |

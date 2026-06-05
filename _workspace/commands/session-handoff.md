@@ -1,6 +1,6 @@
-# 커스텀 명령어: `/session-handoff`
+# 커스텀 명령어: `session-handoff`
 
-세션 종료 전 `/session-handoff` 명령어로 실행합니다.
+세션 종료 전 `session-handoff 실행` 또는 `@session-handoff.md 실행` 으로 호출합니다.
 이 파일은 명령어의 문서 템플릿 및 작성 원칙 참고용입니다.
 
 ---

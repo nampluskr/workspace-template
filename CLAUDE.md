@@ -152,11 +152,19 @@ _assets/          →      scripts/       →      outputs/
 ## 9 커스텀 명령어
 
 커스텀 명령어는 `_workspace/commands/` 에 저장된 Markdown 파일로 정의된다.
-사용자가 `/{파일명}` 형식으로 호출하면, 해당 파일의 내용을 프롬프트로 실행한다.
+아래 두 가지 방법으로 호출하면, 해당 파일의 내용을 프롬프트로 실행한다.
 
-- 명령어 형식: `/{파일명 (확장자 제외)}`
+- 방법 1: `{파일명 (확장자 제외)} 실행`
+- 방법 2: `@{파일명.md} 실행`
 - 정의 파일 위치: `_workspace/commands/`
 - 새 명령어 추가 시 `_workspace/commands/` 에 Markdown 파일을 추가하면 즉시 사용 가능하다.
+
+호출 예시:
+
+```
+project-init 실행
+@project-init.md 실행
+```
 
 현재 등록된 커스텀 명령어 목록은 `_workspace/commands/` 폴더를 확인한다.
 
