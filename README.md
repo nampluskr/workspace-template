@@ -2,40 +2,53 @@
 
 {프로젝트에 대한 한 줄 설명}
 
+> 생성일: YYYY-MM-DD
+> 수정일: YYYY-MM-DD
+> 태그: {subject-code}, {tag1}, {tag2}
+
 ---
 
-## Overview
+**목차**
+
+1. [개요](#1-개요)
+2. [Quick Start](#2-quick-start)
+3. [디렉토리 구조](#3-디렉토리-구조)
+4. [라이선스](#4-라이선스)
+
+---
+
+## 1 개요
 
 {프로젝트 목적 및 주요 내용 요약}
 
 ---
 
-## Quick Start
+## 2 Quick Start
 
-### 요구 사항
+### 2.1 요구 사항
 
 - Python 3.x
 - {기타 필요한 환경}
 
-### 설치 및 실행
+### 2.2 설치 및 실행
 
 ```bash
-# 레포지토리 클론
+# Clone the repository
 git clone https://github.com/{username}/{repo}.git
 cd {repo}
 
-# 환경 설정
+# Set up environment
 {환경 설정 명령어}
 
-# 실행
+# Run
 {실행 명령어}
 ```
 
 ---
 
-## Directory Structure
+## 3 디렉토리 구조
 
-```
+```text
 project-root/
 ├── README.md
 ├── PROJECT.md
@@ -50,6 +63,6 @@ project-root/
 
 ---
 
-## License
+## 4 라이선스
 
 {라이선스 정보}

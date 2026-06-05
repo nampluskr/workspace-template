@@ -45,7 +45,7 @@
 | `outputs/` 하위 구조 | 하위 폴더 없이 단순화 | 프로젝트별 필요 시 추가 |
 | 문서 최종 산출물 | `docs/` (Jupyter Book v2 배포 가능) | |
 | 용어 사용 기준 | 워크스페이스=환경/구조, 프로젝트=작업내용 | 혼용 허용, CLAUDE.md 에 명시 |
-| 커스텀 명령어 관리 | `_workspace/prompts/` 파일 기반 동적 참조 | CLAUDE.md 에 목록 불필요 |
+| 커스텀 명령어 관리 | `_workspace/commands/` 파일 기반 동적 참조 | CLAUDE.md 에 목록 불필요 |
 | 문서 작성 언어 | 한국어 (코드 주석 / 파일명 / 명령어는 영어 유지) | |
 | 세션 핸드오프 파일명 | `YYMMDD-HHMMSS_session-handoff.md` | |
 | git commit/push | 사용자가 VSCode UI 로 직접 수행 | AI CLI 는 메시지만 제안 |
@@ -68,10 +68,10 @@
   - CLAUDE.md 와 역할 중복 → CLAUDE.md 로 통합
 
 - **`_workspace/` 네이밍 유지**
-  - `_project/` 변경 검토: `PROJECT.md` 와 혼동 가능성 및 `prompts/` 성격이 환경(워크스페이스) 에 가까움
+  - `_project/` 변경 검토: `PROJECT.md` 와 혼동 가능성 및 `commands/` 성격이 환경(워크스페이스) 에 가까움
 
 - **커스텀 명령어 동적 참조 방식**
-  - CLAUDE.md 에 명령어 목록 하드코딩 대신 `_workspace/prompts/` 폴더를 단일 소스로 참조
+  - CLAUDE.md 에 명령어 목록 하드코딩 대신 `_workspace/commands/` 폴더를 단일 소스로 참조
   - 새 프롬프트 파일 추가만으로 명령어 자동 확장
 
 ---
@@ -109,7 +109,7 @@
 
 현재까지 완성된 산출물:
 - `workspace-template/` 폴더 구조 및 필수 파일 4개 완성
-- `_workspace/prompts/session-handoff.md`, `commit-message.md` 완성
+- `_workspace/commands/session-handoff.md`, `commit-message.md` 완성
 - 모든 파일 한국어로 작성 완료
 
 우선적으로 다뤄주세요:
@@ -125,5 +125,5 @@
 | --- | --- | --- |
 | 템플릿 폴더 | `workspace-template/` | 신규 프로젝트 시작 시 복사 |
 | AI CLI 운영 지침 | `workspace-template/CLAUDE.md` | 다른 CLI 사용 시 복사 후 rename |
-| 세션 핸드오프 프롬프트 | `workspace-template/_workspace/prompts/session-handoff.md` | `/session-handoff` 명령어 참조 |
-| 커밋 메시지 프롬프트 | `workspace-template/_workspace/prompts/commit-message.md` | `/commit-message` 명령어 참조 |
+| 세션 핸드오프 프롬프트 | `workspace-template/_workspace/commands/session-handoff.md` | `/session-handoff` 명령어 참조 |
+| 커밋 메시지 프롬프트 | `workspace-template/_workspace/commands/commit-message.md` | `/commit-message` 명령어 참조 |

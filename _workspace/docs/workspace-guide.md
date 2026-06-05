@@ -3,8 +3,8 @@
 이 문서는 AI CLI 와 함께 사용하는 범용 워크스페이스 템플릿의 목적, 구조, 사용법을 설명한다.
 
 > 생성일: 2026-06-05
-> 수정일: 2026-06-05
-> 태그: workspace, guide, template, ai-cli
+> 수정일: 2026-06-05 (README.md, PROJECT.md 적용 범위 추가)
+> 태그: workspace, guide, template, ai-cli, subject-classification
 
 ---
 
@@ -16,7 +16,8 @@
 4. [기본 사용 흐름](#4-기본-사용-흐름)
 5. [AI CLI 사용 방식](#5-ai-cli-사용-방식)
 6. [문서 산출물 관리](#6-문서-산출물-관리)
-7. [사용 시 주의사항](#7-사용-시-주의사항)
+7. [주제 분류 체계](#7-주제-분류-체계)
+8. [사용 시 주의사항](#8-사용-시-주의사항)
 
 ---
 
@@ -134,9 +135,37 @@ docs/
 
 문서 작성 시 기본 규칙은 `_workspace/rules/writing-style.md` 를 따른다. 기술 문서와 학술 문서는 한국어 서술체로 작성하고, 코드 주석은 영어로 작성한다. 수식, 명령어, 경로, 파일명은 필요한 경우 영어 또는 LaTeX 를 그대로 사용한다.
 
+이 규칙은 `docs/contents/` 아래의 최종 문서뿐만 아니라 루트의 `README.md` 와 `PROJECT.md` 에도 동일하게 적용한다. 두 파일은 메타정보 블록(`> 생성일 / 수정일 / 태그`), 목차, H2/H3 번호 체계를 갖추어야 한다.
+
 문서에 포함되는 이미지는 해당 챕터의 `images/` 폴더에 저장한다. 예를 들어 1장 문서에 들어가는 이미지는 `docs/contents/chap01/images/` 에 저장한다.
 
-## 7 사용 시 주의사항
+## 7 주제 분류 체계
+
+워크스페이스에서 작성하는 문서, 스크립트, 산출물은 공통 subject 분류를 기준으로 분류한다.
+분류 기준의 전체 목록과 세부 항목은 `_workspace/rules/subject-classification.md` 에서 관리한다.
+
+현재 정의된 subject code는 다음과 같다.
+
+| Code | Subject |
+|---|---|
+| `MATH` | Mathematics |
+| `PHYS` | Physics |
+| `NA` | Numerical Analysis |
+| `ML` | Machine Learning |
+| `CV` | Computer Vision |
+| `NLP` | Natural Language Processing |
+| `CS` | Computer Science |
+| `DEV` | Development Environment and Tools |
+| `MISC` | Miscellaneous |
+
+Subject code는 다음 방식으로 활용한다.
+
+- 문서 메타정보 태그에 subject code를 첫 번째 태그로 포함한다. 예: `태그: ML, classification, pytorch`
+- 폴더명이나 파일명에 접두사로 사용하여 주제를 명시할 수 있다. 예: `ml-classification/`, `nlp_tokenizer.md`
+- 여러 subject에 걸치는 경우 해당 code를 모두 포함한다. 예: `태그: MATH, ML, optimization`
+- 어느 subject에도 속하지 않는 경우 `MISC` 를 사용한다.
+
+## 8 사용 시 주의사항
 
 이 워크스페이스를 사용할 때의 주의사항은 다음과 같다.
 
