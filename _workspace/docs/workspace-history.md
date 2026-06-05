@@ -16,7 +16,7 @@
 
 ---
 
-## 1 변경 이력 요약
+## 1. 변경 이력 요약
 
 | 날짜 | 세션 | 주요 변경 내용 |
 | --- | --- | --- |
@@ -27,12 +27,13 @@
 | 2026-06-05 | 5차 | 커스텀 명령어 체계 정비 및 session-start/end/project-init 명령어 추가 |
 | 2026-06-05 | 6차 | 문서 중복/충돌 해소, 메타정보 태그→주제 전환, project-init 명령어 개선 |
 | 2026-06-06 | 7차 | project-update 명령어 추가, 전체 명령어 문서 문체 통일, 문서 작성 규칙 CLAUDE.md/AGENTS.md 이동 |
+| 2026-06-06 | 8차 | 섹션 번호 형식 변경(점 추가), 세션 핸드오프 파일명 오류 수정, session-end/handoff 파일명 지침 추가 |
 
 ---
 
-## 2 세션별 상세 내역
+## 2. 세션별 상세 내역
 
-### 2.1 1차 세션 — 워크스페이스 템플릿 최초 설계
+### 2.1. 1차 세션 — 워크스페이스 템플릿 최초 설계
 
 > 참조: `_workspace/sessions/260605-061546_session-handoff.md`
 
@@ -66,7 +67,7 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.2 2차 세션 — 워크스페이스 가이드 문서 작성 및 AI CLI 지침 정비
+### 2.2. 2차 세션 — 워크스페이스 가이드 문서 작성 및 AI CLI 지침 정비
 
 > 참조: `_workspace/sessions/260605-201612_session-handoff.md`
 
@@ -92,7 +93,7 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.3 3차 세션 — writing-style.md 개선 및 coding-style.md 분리
+### 2.3. 3차 세션 — writing-style.md 개선 및 coding-style.md 분리
 
 > 참조: `_workspace/sessions/260605-213711_session-handoff.md`
 
@@ -128,7 +129,7 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.4 4차 세션 — 주제 분류 체계 도입
+### 2.4. 4차 세션 — 주제 분류 체계 도입
 
 > 참조: `_workspace/sessions/260605-215637_session-handoff.md`
 
@@ -161,7 +162,7 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.5 5차 세션 — 커스텀 명령어 체계 정비 및 신규 명령어 추가
+### 2.5. 5차 세션 — 커스텀 명령어 체계 정비 및 신규 명령어 추가
 
 **배경**
 
@@ -197,9 +198,9 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.6 6차 세션 — 문서 중복/충돌 해소 및 메타정보 태그→주제 전환
+### 2.6. 6차 세션 — 문서 중복/충돌 해소 및 메타정보 태그→주제 전환
 
-> 참조: `_workspace/sessions/260605-HHMMSS_session-handoff.md`
+> 참조: `_workspace/sessions/260605-233851_session-handoff.md`
 
 **배경**
 
@@ -231,7 +232,7 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 
 ---
 
-### 2.7 7차 세션 — project-update 명령어 추가 및 문서 문체 통일
+### 2.7. 7차 세션 — project-update 명령어 추가 및 문서 문체 통일
 
 **배경**
 
@@ -264,3 +265,33 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 신규 명령어명 | `project-update` (`project-edit`, `project-patch` 검토 후 확정) |
 | project-update 동작 방식 | 자유 형식 입력 → 의도 파악 → 단순 추가는 즉시 반영, 삭제·구조 변경은 확인 후 반영 |
 | 문체 규칙 위치 | `writing-style.md` 에서 `CLAUDE.md` / `AGENTS.md §9` 로 이동, writing-style.md 는 참조 |
+
+---
+
+### 2.8. 8차 세션 — 섹션 번호 형식 변경 및 세션 파일명 오류 수정
+
+> 참조: `_workspace/sessions/260606-071228_session-handoff.md`
+
+**배경**
+
+LaTeX/ACM/Springer 계열 관용에 맞춰 섹션 번호 형식을 통일하고, 과거 세션에서 발생한 핸드오프 파일명 오류(플레이스홀더 미치환)를 수정하였다. 재발 방지를 위해 session-end/session-handoff 명령어에 파일명 작성 지침을 추가하였다. CLAUDE.md/AGENTS.md 동기화 방식은 수동 복사 현행 유지로 결정하였다.
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| 전체 `.md` 파일 (24개) | H2/H3 헤더 번호 형식 변경 (`## 1 제목` → `## 1. 제목`, `### 1.1 제목` → `### 1.1. 제목`) |
+| `_workspace/rules/writing-style.md` | §5.1 테이블, §5.2 규칙 설명 및 예시, §2.1 구조 템플릿 코드블록 업데이트 |
+| `_workspace/commands/session-end.md` | Step 4에 `date +%y%m%d-%H%M%S` 실행 후 파일명 사용 지침 추가, 플레이스홀더 금지 명시 |
+| `_workspace/commands/session-handoff.md` | 저장 위치 섹션에 동일 파일명 지침 추가 |
+| `_workspace/docs/workspace-history.md` | 6차 세션 참조 파일명 수정 (`260605-HHMMSS` → `260605-233851`) |
+| `_workspace/sessions/260605-HHMMSS_session-handoff.md` | 파일명 수정 → `260605-233851_session-handoff.md` |
+| `_workspace/sessions/260606-000000_session-handoff.md` | 파일명 수정 → `260606-001837_session-handoff.md` |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 섹션 번호 형식 | LaTeX/ACM/Springer 계열 관용 적용 — H2: `1.`, H3: `1.1.`, H4/Stage/Phase: 점 없음 |
+| 세션 파일명 시각 기준 | 커밋 시각 기준으로 rename (`date +%y%m%d-%H%M%S` 실행 후 사용) |
+| CLAUDE.md/AGENTS.md 동기화 | SSOT 방식(공통 파일 참조) 불채택 — 자동 컨텍스트 로드 필수 조건으로 현행 수동 복사 유지 |

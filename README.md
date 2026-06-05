@@ -16,7 +16,7 @@
 
 ---
 
-## 1 개요
+## 1. 개요
 
 이 워크스페이스는 수학, 물리, 수치해석, 머신러닝, 컴퓨터 비전, 자연어처리, 컴퓨터과학 분야의 연구 및 학습 자료를 체계적으로 정리하고 Jupyter Book 형태의 문서로 산출하기 위한 환경이다.
 
@@ -26,7 +26,7 @@
 
 ---
 
-## 2 주제 분류
+## 2. 주제 분류
 
 MATH, PHYS, NA, ML, CV, NLP, CS, DEV, MISC 의 subject code 를 기준으로 분류한다.
 
@@ -34,7 +34,7 @@ MATH, PHYS, NA, ML, CV, NLP, CS, DEV, MISC 의 subject code 를 기준으로 분
 
 ---
 
-## 3 디렉토리 구조
+## 3. 디렉토리 구조
 
 ```text
 project-root/

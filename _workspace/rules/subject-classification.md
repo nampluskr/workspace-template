@@ -17,7 +17,7 @@
 
 ---
 
-## 1 개요
+## 1. 개요
 
 전체 분류는 연구, 학습, 강의자료, 개발환경 문서화를 포괄하도록 구성한다.
 각 subject code는 문서 frontmatter 태그, 파일명 접두사, 색인, 검색 키워드에 활용할 수 있다.
@@ -28,7 +28,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - 폴더명 접두사 예시: `ml-classification/`, `nlp-tokenization/`
 - 파일명 접두사 예시: `ml_image_classifier.py`, `nlp_tokenizer.md`
 
-## 2 분류 목록
+## 2. 분류 목록
 
 | No | Code | Subject |
 |---:|---|---|
@@ -42,11 +42,11 @@ Subject code를 사용하는 방식은 다음과 같다.
 | 8 | `DEV` | Development Environment and Tools |
 | 9 | `MISC` | Miscellaneous |
 
-## 3 분류별 세부 항목 예시
+## 3. 분류별 세부 항목 예시
 
 각 분류에 포함되는 세부 항목의 예시를 정리한다.
 
-### 3.1 [MATH] Mathematics
+### 3.1. [MATH] Mathematics
 
 - Real Analysis
 - Complex Analysis
@@ -57,7 +57,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Special Functions
 - Riemann Zeta Function
 
-### 3.2 [PHYS] Physics
+### 3.2. [PHYS] Physics
 
 - Electromagnetism
 - Electrostatics
@@ -68,7 +68,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Plasma Physics
 - Plasma Simulation
 
-### 3.3 [NA] Numerical Analysis
+### 3.3. [NA] Numerical Analysis
 
 - Nonlinear Equations
 - Numerical Linear Algebra
@@ -85,7 +85,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Pi Computation
 - Chaos and Fractals
 
-### 3.4 [ML] Machine Learning
+### 3.4. [ML] Machine Learning
 
 - Classification
 - Regression
@@ -94,7 +94,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Anomaly Detection
 - AutoML - PyCaret
 
-### 3.5 [CV] Computer Vision
+### 3.5. [CV] Computer Vision
 
 - Image Preprocessing: OpenCV / scikit-image / PIL / torchvision / augmentations
 - Image Classification
@@ -104,7 +104,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Vision Backbones
 - Vision Datasets
 
-### 3.6 [NLP] Natural Language Processing
+### 3.6. [NLP] Natural Language Processing
 
 - Text Preprocessing
 - Tokenization
@@ -118,7 +118,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Retrieval-Augmented Generation
 - Huggingface and Open LLM Models
 
-### 3.7 [CS] Computer Science
+### 3.7. [CS] Computer Science
 
 - Python Programming
 - C++ Programming
@@ -127,7 +127,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Design Patterns
 - Test-Driven Development and Refactoring
 
-### 3.8 [DEV] Development Environment and Tools
+### 3.8. [DEV] Development Environment and Tools
 
 - Git
 - GitHub: Development Process / Branch Strategy
@@ -144,7 +144,7 @@ Subject code를 사용하는 방식은 다음과 같다.
 - Windows Development Environment
 - AI CLI Tools
 
-### 3.9 [MISC] Miscellaneous
+### 3.9. [MISC] Miscellaneous
 
 - Temporary Notes
 - Uncategorized Materials
