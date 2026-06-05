@@ -1,0 +1,13 @@
+version: 1
+
+project:
+  title: 프로젝트 제목
+  authors:
+    - name: nampluskr
+  toc:
+    - file: contents/chap01/index
+
+site:
+  template: book-theme
+  # options:
+  #   logo: logo.png
