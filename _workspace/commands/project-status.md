@@ -4,8 +4,6 @@
 TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최근 세션 요약을 출력한다.
 어떤 파일도 수정하지 않는 읽기 전용 명령어이다.
 
----
-
 ## 실행 절차
 
 ### Step 1. TASKS.md 진행률 집계
@@ -27,8 +25,6 @@ TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최
 `_workspace/docs/project-history.md` 의 변경 이력 요약 테이블에서 마지막 2개 행을 읽어 출력한다.
 
 - 파일이 없거나 테이블 행이 없으면 해당 항목을 생략한다.
-
----
 
 ## 출력 형식
 

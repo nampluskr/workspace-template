@@ -3,8 +3,6 @@
 세션 종료 전 `session-end 실행` 또는 `@session-end.md 실행` 으로 호출한다.
 TASKS.md 업데이트, project-history.md 갱신, 세션 핸드오프 문서 작성을 순서대로 수행한다.
 
----
-
 ## 실행 절차
 
 ### Step 1. 작업 결과 확인

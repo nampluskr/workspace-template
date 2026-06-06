@@ -6,15 +6,11 @@
 > 수정일시: 260606-074638
 > 주제: Development Environment and Tools
 
----
-
 **목차**
 
 1. [코드 주석](#1-코드-주석)
 2. [코드 블록](#2-코드-블록)
 3. [Jupyter Notebook 규칙](#3-jupyter-notebook-규칙)
-
----
 
 ## 1. 코드 주석
 
@@ -26,8 +22,6 @@
 # Compute the mean of the input tensor
 mean = x.mean(dim=0)
 ```
-
----
 
 ## 2. 코드 블록
 
@@ -83,8 +77,6 @@ python train.py --config config.yaml
 [Expected output]
 Epoch 1/50: loss=0.4231, acc=0.8120
 ```
-
----
 
 ## 3. Jupyter Notebook 규칙
 

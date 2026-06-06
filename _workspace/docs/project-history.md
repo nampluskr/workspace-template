@@ -7,14 +7,10 @@
 > 수정일시: 260606-074638
 > 주제: Development Environment and Tools
 
----
-
 **목차**
 
 1. [변경 이력 요약](#1-변경-이력-요약)
 2. [세션별 상세 내역](#2-세션별-상세-내역)
-
----
 
 ## 1. 변경 이력 요약
 
@@ -29,8 +25,7 @@
 | 260606 | 001837 | 7차 | project-update 명령어 추가, 전체 명령어 문서 문체 통일, 문서 작성 규칙 CLAUDE.md/AGENTS.md 이동 |
 | 260606 | 072548 | 8차 | 섹션 번호 형식 변경(점 추가), 세션 핸드오프 파일명 오류 수정, session-end/handoff 파일명 지침 추가 |
 | 260606 | 075523 | 9차 | 메타정보 형식 변경(생성일시/수정일시, YYMMDD-HHMMSS), workspace-guide §5 SSOT 미채택 이유 추가, project-history §1 시각 컬럼 추가 |
-
----
+| 260607 | 074159 | 10차 | CLAUDE.md 섹션 재구성(§2 문서 작성 규칙 앞으로, §3 AI CLI 응답 스타일 신설), 개조식 원칙 전면 적용, README.md 프로젝트 템플릿으로 교체, workspace-readme.md 신규 생성, AGENTS.md 동기화 |
 
 ## 2. 세션별 상세 내역
 
@@ -66,8 +61,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | git commit/push | 사용자가 VSCode UI로 직접 수행, AI CLI는 메시지만 제안 |
 | WORKSPACE_GUIDE.md | 폐기 결정 → CLAUDE.md로 통합 |
 
----
-
 ### 2.2. 2차 세션 — 워크스페이스 가이드 문서 작성 및 AI CLI 지침 정비
 
 > 참조: `_workspace/sessions/260605-201612_session-handoff.md`
@@ -91,8 +84,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 가이드 위치 | `_workspace/docs/` |
 | CLAUDE.md / AGENTS.md | 동일한 내용으로 유지 (`cmp -s`로 검증) |
 | 기본 폴더 구조 | `AGENTS.md`, `_workspace/docs/` 를 기본 항목으로 추가 |
-
----
 
 ### 2.3. 3차 세션 — writing-style.md 개선 및 coding-style.md 분리
 
@@ -128,8 +119,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | Stage/Phase 표기 | 콜론 없는 형식 (`Stage 1 {Stage명}`) |
 | sync-cli-guides 명령어 | 보류 (CLAUDE.md / AGENTS.md 동기화 방식 미결) |
 
----
-
 ### 2.4. 4차 세션 — 주제 분류 체계 도입
 
 > 참조: `_workspace/sessions/260605-215637_session-handoff.md`
@@ -160,8 +149,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 세부 항목 형식 | 체크박스 없는 일반 목록 (예시 성격) |
 | 태그 위치 | subject code를 태그 첫 번째 위치에 배치 |
 | 세부 항목 언어 | 전체 영어 (한국어 항목 "pi 계산", "카오스와 프랙탈"을 영어로 수정) |
-
----
 
 ### 2.5. 5차 세션 — 커스텀 명령어 체계 정비 및 신규 명령어 추가
 
@@ -197,8 +184,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | session-end 수행 범위 | TASKS.md 업데이트 → workspace-history.md 갱신 → session-handoff 순으로 확정 |
 | project-init 출력 순서 | PROJECT.md → TASKS.md → README.md 순으로 확정 |
 
----
-
 ### 2.6. 6차 세션 — 문서 중복/충돌 해소 및 메타정보 태그→주제 전환
 
 > 참조: `_workspace/sessions/260605-233851_session-handoff.md`
@@ -230,8 +215,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | 메타정보 `태그` 폐기 | subject 전체명(영어)을 값으로 하는 `주제` 항목으로 전환 |
 | `subject-classification.md` 파일명 | `subjects.md`, `subject-list.md` 검토 후 현행 유지 결정 |
 | CLAUDE.md / AGENTS.md 동기화 | 내용 완전 동일 유지 (AI CLI 공통 지침이므로 CLI 전용 분기 없음) |
-
----
 
 ### 2.7. 7차 세션 — project-update 명령어 추가 및 문서 문체 통일
 
@@ -267,8 +250,6 @@ GitHub 연계 로컬 워크스페이스에서 Claude Code, Codex, RooCode 같은
 | project-update 동작 방식 | 자유 형식 입력 → 의도 파악 → 단순 추가는 즉시 반영, 삭제·구조 변경은 확인 후 반영 |
 | 문체 규칙 위치 | `writing-style.md` 에서 `CLAUDE.md` / `AGENTS.md §9` 로 이동, writing-style.md 는 참조 |
 
----
-
 ### 2.8. 8차 세션 — 섹션 번호 형식 변경 및 세션 파일명 오류 수정
 
 > 참조: `_workspace/sessions/260606-071228_session-handoff.md`
@@ -297,8 +278,6 @@ LaTeX/ACM/Springer 계열 관용에 맞춰 섹션 번호 형식을 통일하고,
 | 세션 파일명 시각 기준 | 커밋 시각 기준으로 rename (`date +%y%m%d-%H%M%S` 실행 후 사용) |
 | CLAUDE.md/AGENTS.md 동기화 | SSOT 방식(공통 파일 참조) 불채택 — 자동 컨텍스트 로드 필수 조건으로 현행 수동 복사 유지 |
 
----
-
 ### 2.9. 9차 세션 — 메타정보 형식 변경 및 문서 정비
 
 > 참조: `_workspace/sessions/260606-075523_session-handoff.md`
@@ -323,3 +302,38 @@ LaTeX/ACM/Springer 계열 관용에 맞춰 섹션 번호 형식을 통일하고,
 | --- | --- |
 | 메타정보 날짜 형식 | `YYMMDD-HHMMSS` 공식 형식 확정 (기존 파일은 git 커밋 시각 기준 소급 변환) |
 | CLAUDE.md/AGENTS.md SSOT 미채택 근거 | workspace-guide §5에 명시 — 외부 파일 참조 시 자동 컨텍스트 로드 불보장 |
+
+### 2.10. 10차 세션 — CLAUDE.md 구조 개편 및 개조식 원칙 전면 적용
+
+> 참조: `_workspace/sessions/260607-074159_session-handoff.md`
+
+**배경**
+
+문서 작성 규칙이 워크스페이스의 절대 원칙임을 강조하기 위해 CLAUDE.md 섹션 순서를 재구성하였다. AI CLI 응답 스타일 규칙을 문서 작성 규칙과 분리하여 신규 섹션으로 독립시켰다. 개조식 항목 작성 원칙을 CLAUDE.md 전체에 적용하고 AGENTS.md 와 동기화하였다. README.md 를 프로젝트 전용 템플릿으로 교체하고, 기존 워크스페이스 소개 내용은 workspace-readme.md 로 분리하였다.
+
+**신규 생성 파일**
+
+| 파일 | 내용 |
+| --- | --- |
+| `_workspace/docs/workspace-readme.md` | 기존 README.md 의 워크스페이스 소개 내용 이전 |
+| `_workspace/docs/project-dashboard.md` | 프로젝트 대시보드 문서 (신규) |
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `README.md` | 워크스페이스 소개 제거 → 프로젝트 전용 템플릿으로 교체 |
+| `TASKS.md` | 메타정보 블록 추가 |
+| `CLAUDE.md` | 섹션 순서 재구성(11개), §2 문서 작성 규칙 앞으로 이동, §3 AI CLI 응답 스타일 신설, 전체 항목 개조식 적용 |
+| `AGENTS.md` | CLAUDE.md 최종 상태와 완전 동기화 |
+| 전체 `.md` (19개) | `---` 구분선 일괄 제거 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 문서 작성 규칙 위치 | §2 로 앞으로 이동 — 워크스페이스 절대 원칙임을 구조로 강조 |
+| AI CLI 응답 스타일 분리 | §3 신설 — 경어체 응답, 이모지 금지, 불필요한 사과/서두 금지 (문서 작성 규칙과 별개) |
+| 개조식 항목 규칙 | `항목명: 설명` 은 대상 구분이 필요할 때만 사용, 나머지는 설명만 |
+| `---` 구분선 | GitHub 마크다운 자동 구분선과 중복 → 전체 문서에서 일괄 제거 |
+| README.md 역할 분리 | 루트 README.md 는 프로젝트 전용, 워크스페이스 소개는 workspace-readme.md 로 분리 |

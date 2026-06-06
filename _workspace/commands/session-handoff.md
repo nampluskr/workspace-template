@@ -3,8 +3,6 @@
 세션 종료 전 `session-handoff 실행` 또는 `@session-handoff.md 실행` 으로 호출한다.
 이 파일은 명령어의 문서 템플릿 및 작성 원칙 참고용이다.
 
----
-
 ## 저장 위치
 
 ```
@@ -13,8 +11,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 
 파일 저장 전에 반드시 `date +%y%m%d-%H%M%S` 를 실행하여 실제 현재 시각을 확인하고 그 값을 파일명에 사용한다. 플레이스홀더(`HHMMSS`, `000000` 등)를 그대로 쓰는 것을 금지한다.
 
----
-
 ## 작성 원칙
 
 - 단순 요약이 아니라, 다른 세션에서 이 문서만 읽어도 즉시 작업을 이어받을 수 있도록 작성한다.
@@ -22,8 +18,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 - 앞으로 할 작업은 다른 세션에서 바로 지시할 수 있는 수준으로 구체화한다.
 - 기술 용어, 파일명, 폴더명, 결정사항은 정확하게 그대로 기록한다.
 - 사용자의 의도와 맥락이 드러나도록 작성한다 (표면적 요청 + 숨겨진 목적).
-
----
 
 ## 기본 템플릿
 
@@ -34,13 +28,9 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 > 세션 목적: (한 줄로)
 > 이전 핸드오프: {파일명, 없으면 이 줄 생략}
 
----
-
 ## 1. 세션 핵심 요약
 
 (이 세션에서 논의된 이슈를 모두 불릿 형식으로 작성. 확정/미결 구분 없이 언급된 모든 항목 포함)
-
----
 
 ## 2. 사용자 요청 및 의도
 
@@ -50,8 +40,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 | --- | --- |
 | ... | ... |
 
----
-
 ## 3. 확정된 결정사항
 
 (이 세션에서 사용자가 명시적으로 확정한 내용만 기록)
@@ -59,8 +47,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 | 항목 | 확정 내용 | 비고 |
 | --- | --- | --- |
 | ... | ... | ... |
-
----
 
 ## 4. AI 핵심 제안 및 분석
 
@@ -71,8 +57,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
   - 사용자 수용 이유
   - (필요시) 비교 테이블
 
----
-
 ## 5. 미결 사항
 
 (논의했지만 아직 결정되지 않은 항목)
@@ -81,8 +65,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 | --- | --- | --- | --- |
 | 1 | ... | 검토중 | ... |
 
----
-
 ## 6. 다음 작업 목록
 
 (이 세션 이후 해야 할 작업을 우선순위 순으로)
@@ -90,8 +72,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 | 우선순위 | 작업 | 관련 폴더/파일 | 사용할 도구 |
 | --- | --- | --- | --- |
 | 1 | ... | ... | ... |
-
----
 
 ## 7. 다음 세션에서 이어받기
 
@@ -107,8 +87,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
  특히 다음 항목을 우선적으로 다뤄주세요:
  1. ...
  2. ..."
-
----
 
 ## 8. 참고 자료 및 링크
 
@@ -126,8 +104,6 @@ _workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
 - 섹션 7 (새 세션 시작 지시문) 은 복사-붙여넣기 즉시 사용 가능하게 작성한다.
 - 전문 용어, 파일명, 경로는 정확하게 그대로 기록한다.
 - 마크다운 코드블록, 표, 목록을 적극 활용하여 구조화한다.
-
----
 
 ## 변형 버전
 
