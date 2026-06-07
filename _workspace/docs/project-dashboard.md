@@ -20,7 +20,7 @@
 
 프로젝트 항목은 사용자가 제목과 간단한 개요를 제시하면 AI CLI 가 주제, 상태, 예상 산출물, 다음 행동을 정리하여 이 문서에 반영한다. 실제 프로젝트 폴더는 항목이 `ready` 또는 `active` 상태가 된 뒤 생성한다.
 
-프로젝트의 subject code 는 `_workspace/rules/subject-classification.md` 를 기준으로 한다.
+프로젝트의 subject code 는 `_workspace/rules/subjects.md` 를 기준으로 한다.
 
 ## 2. 상태 정의
 
@@ -71,7 +71,7 @@
 
 AI CLI 는 입력 내용을 바탕으로 다음 작업을 수행한다.
 
-- `_workspace/rules/subject-classification.md` 기준으로 subject code 를 판정한다.
+- `_workspace/rules/subjects.md` 기준으로 subject code 를 판정한다.
 - 제목을 간결한 프로젝트명으로 정리한다.
 - 개요를 1문장으로 정제한다.
 - 예상 산출물을 `문서`, `코드`, `데이터`, `이미지`, `Jupyter Book`, `운영 문서` 중 적절한 값으로 정리한다.

@@ -4,7 +4,7 @@
 각 항목은 세션 핸드오프 문서를 기반으로 작성하며, 향후 작업 맥락 파악과 의사결정 근거 추적에 활용한다.
 
 > 생성일시: 260605-220755
-> 수정일시: 260606-074638
+> 수정일시: 260607-105919
 > 주제: Development Environment and Tools
 
 **목차**
@@ -26,6 +26,10 @@
 | 260606 | 072548 | 8차 | 섹션 번호 형식 변경(점 추가), 세션 핸드오프 파일명 오류 수정, session-end/handoff 파일명 지침 추가 |
 | 260606 | 075523 | 9차 | 메타정보 형식 변경(생성일시/수정일시, YYMMDD-HHMMSS), workspace-guide §5 SSOT 미채택 이유 추가, project-history §1 시각 컬럼 추가 |
 | 260607 | 074159 | 10차 | CLAUDE.md 섹션 재구성(§2 문서 작성 규칙 앞으로, §3 AI CLI 응답 스타일 신설), 개조식 원칙 전면 적용, README.md 프로젝트 템플릿으로 교체, workspace-readme.md 신규 생성, AGENTS.md 동기화 |
+| 260607 | 082829 | 11차 | CLAUDE.md/AGENTS.md 전 섹션 H3 서브섹션 추가, §6/§7/§9 중복 간소화(참조 링크 추가), writing-style.md 항목 작성 규칙 적용(개조식 위반 4곳 수정) |
+| 260607 | 100925 | 12차 | writing-style.md 도입 문장 규칙(§2.7) 추가 및 전 문서 적용, coding-style.md → coding-style-python.md / coding-style-notebook.md 언어별 분리 |
+| 260607 | 105919 | 13차 | coding-style 규칙 보완, subjects.md §3 Overview 문단 추가, subject-classification.md → subjects.md rename, legacy/ 폴더 추가 |
+| 260607 | 111357 | 14차 | README.md 섹션 재구성 — 주제 분류·디렉토리 구조 제거, 내용 및 방법·결과 및 의의·한계 및 미진사항 신규 추가 |
 
 ## 2. 세션별 상세 내역
 
@@ -302,6 +306,133 @@ LaTeX/ACM/Springer 계열 관용에 맞춰 섹션 번호 형식을 통일하고,
 | --- | --- |
 | 메타정보 날짜 형식 | `YYMMDD-HHMMSS` 공식 형식 확정 (기존 파일은 git 커밋 시각 기준 소급 변환) |
 | CLAUDE.md/AGENTS.md SSOT 미채택 근거 | workspace-guide §5에 명시 — 외부 파일 참조 시 자동 컨텍스트 로드 불보장 |
+
+### 2.11. 11차 세션 — CLAUDE.md 서브섹션 구조화 및 writing-style.md 항목 작성 규칙 적용
+
+> 참조: `_workspace/sessions/260607-082829_session-handoff.md`
+
+**배경**
+
+CLAUDE.md 의 각 섹션이 서브섹션 없이 평면적 불릿 목록으로만 구성되어 있어 세부 규칙 탐색이 불편하였다. 전 섹션에 H3 서브섹션을 추가하여 계층 구조를 갖추었다. 또한 §6 네이밍 규칙, §7 코딩 컨벤션, §9 Jupyter Book v2 는 `_workspace/rules/` 전용 파일과 내용이 중복되어 핵심 항목 + 참조 링크 형태로 간소화하였다. 아울러 `writing-style.md` 내 항목 작성 규칙을 위반하는 4곳을 수정하였다.
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `CLAUDE.md` | 전 섹션 H3 서브섹션 추가, §4.2 핵심 파일 설명 표 신규 추가, §6/§7/§9 간소화 및 참조 링크 추가, 목차 번호 목록 형식으로 변경 |
+| `AGENTS.md` | CLAUDE.md 와 동일 내용으로 완전 동기화 |
+| `_workspace/rules/writing-style.md` | §1.3 출력 형식 개조식 수정, §3.1/§4.2/§5.1 도입 문장 삽입, §2.7 잘못 추가된 항목 제거 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 서브섹션 추가 범위 | 전 섹션에 H3 추가 — 단, §6/§7 은 간소화 후 서브섹션 없는 단일 목록으로 유지 |
+| §6/§7/§9 간소화 기준 | 전용 rules 파일에서 이미 상세히 다루는 내용은 핵심 항목 + 참조 링크로 축약 |
+| 신규 rules 파일 미생성 | §3 AI CLI 응답 스타일, §2.3 항목 작성 규칙은 내용이 짧아 CLAUDE.md 에 유지 |
+| writing-style.md 수정 원칙 | 규칙 추가가 아닌 기존 문서에 규칙 적용 — 위반 4곳만 최소 수정 |
+
+### 2.12. 12차 세션 — 도입 문장 규칙 추가 및 코딩 스타일 파일 분리
+
+> 참조: `_workspace/sessions/260607-100925_session-handoff.md`
+
+**배경**
+
+테이블·목록 앞에 맥락 없이 나열만 하는 문서 패턴을 규칙으로 명시하고 전 문서에 소급 적용하였다. 도입 문장은 "다음과 같다"와 같이 내용 없이 연결만 하는 표현을 금지하는 방향으로 확정하였다. `coding-style.md`에 Python 전용 규칙과 Jupyter Notebook 전용 규칙이 혼재하고, 향후 C++ 코딩도 예정되어 있어 언어별 파일로 분리하였다.
+
+**신규 생성 파일**
+
+| 파일 | 내용 |
+| --- | --- |
+| `_workspace/rules/coding-style-python.md` | Python 코딩 스타일 (기존 coding-style.md에서 §7 제거 및 python-coding-style-summary.md 내용 통합) |
+| `_workspace/rules/coding-style-notebook.md` | Jupyter Notebook 코딩 스타일 (Jupyter Book v2 문서 구조, 마크다운 셀 규칙, matplotlib 설정 포함) |
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `_workspace/rules/writing-style.md` | §2.3·§2.4·§6.3·§7.2 도입 문장 삽입, §2.7 도입 문장 규칙 신규 추가 |
+| `_workspace/rules/subject-classification.md` | §2 테이블 및 §3.1~§3.9 불릿 목록 앞 도입 문장 삽입 |
+| `CLAUDE.md` | §2.3 "한 줄 이상" → "1문장 이상" 수정, §7 참조 경로 언어별 파일로 업데이트 |
+| `AGENTS.md` | CLAUDE.md와 동일 내용으로 동기화 |
+
+**삭제 파일**
+
+| 파일 | 이유 |
+| --- | --- |
+| `_workspace/rules/coding-style.md` | coding-style-python.md / coding-style-notebook.md 로 대체 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 도입 문장 기준 | "다음과 같다"처럼 내용 없이 목록을 연결만 하는 표현은 금지 — 항목이 존재하는 맥락과 이유를 담아야 함 |
+| coding-style 분리 네이밍 | `coding-style-python.md` / `coding-style-notebook.md` (언어·환경별 접미사 방식) |
+| C++ 확장 계획 | `coding-style-cpp.md` 파일명으로 향후 추가 예정 |
+| notebook-style 범위 | Jupyter Book v2 문서 구조(메타 블럭, 헤더 계층), 마크다운 셀 텍스트·수식, matplotlib Figure 설명(코드 셀 다음 마크다운 셀) 포함 |
+
+### 2.13. 13차 세션 — coding-style 규칙 보완, subjects.md 개편, legacy/ 폴더 추가
+
+> 참조: `_workspace/sessions/260607-105919_session-handoff.md`
+
+**배경**
+
+코딩 스타일 규칙에 admonition 블록, 한국어 코드 금지 범위 등 누락 항목을 보완하였다. `subject-classification.md` 의 §3를 단순 불릿 나열에서 주제별 Overview 문단을 추가하는 형태로 개편하고, 파일명도 간결하게 변경하였다. 레거시 문서·코드를 보관할 `legacy/` 폴더를 신규 추가하였다.
+
+**신규 생성 파일/폴더**
+
+| 파일/폴더 | 내용 |
+| --- | --- |
+| `legacy/` | 참고·보완용 레거시 문서 및 코드 보관 폴더 |
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `_workspace/rules/coding-style-notebook.md` | §2.1 튜토리얼/교육적 어조 금지 추가, §2.4 admonition 블록 신규 추가 |
+| `_workspace/rules/coding-style-python.md` | §3.1 한국어 금지 범위를 주석에서 docstring·type hint까지 확장 |
+| `_workspace/rules/subjects.md` (구 subject-classification.md) | §3 섹션명 변경, §3.1~§3.9 각 주제별 Overview 문단 추가 |
+| `CLAUDE.md` | §4.1 디렉토리 구조 업데이트(그룹 구분선 추가, `legacy/` 반영), §5.2 `legacy/` 항목 추가 |
+| `AGENTS.md` | CLAUDE.md와 동일 내용으로 동기화 |
+| `README.md`, `_workspace/README.md`, `_workspace/docs/project-dashboard.md`, `_workspace/rules/writing-style.md` | `subject-classification.md` 참조를 `subjects.md` 로 일괄 변경 |
+
+**삭제/rename 파일**
+
+| 항목 | 내용 |
+| --- | --- |
+| `_workspace/rules/subject-classification.md` → `subjects.md` | 파일명 간소화 (`classification` 제거) |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| subjects.md §3 형식 | 불릿 항목 유지 + 섹션 헤더와 불릿 사이에 Overview 문단(소주제 묶음별 여러 문단) 추가 |
+| 파일명 변경 | `subject-classification.md` → `subjects.md` (가장 짧고 `rules/` 위치와 결합해 용도 충분히 전달) |
+| `legacy/` 접두사 | `_assets/` 와 달리 작업 소스 자료(수정·가공 허용, Git 추적 대상)이므로 `_` 제거 |
+| `_assets/` 주석 | "읽기 전용 입력 보관소" → "바이너리 읽기 전용 입력 보관소" 로 보완 |
+
+### 2.14. 14차 세션 — README.md 섹션 재구성
+
+> 참조: `_workspace/sessions/260607-111357_session-handoff.md`
+
+**배경**
+
+README.md가 외부 공개용 프로젝트 소개 문서의 역할을 하지 못하고 있었다. 목차에 최상위 제목이 포함되어 있었고, '주제 분류'(내부 운영 정보)와 '디렉토리 구조'(CLAUDE.md §4와 중복)가 외부 공개 문서에 불필요한 섹션으로 포함되어 있었다. 이를 학술·기술 문서 표준 구성인 4개 섹션으로 재정의하였다.
+
+**수정 파일**
+
+| 파일 | 변경 내용 |
+| --- | --- |
+| `README.md` | 목차 최상위 제목 항목 제거, 주제 분류 섹션 제거, 내용 및 방법·결과 및 의의·한계 및 미진사항 신규 추가, 디렉토리 구조 섹션 제거 |
+
+**주요 결정사항**
+
+| 항목 | 결정 내용 |
+| --- | --- |
+| 목차 형식 | 최상위 제목(H1) 항목 제거 — 섹션(H2)만 포함 |
+| 주제 분류 제거 | 내부 운영 정보로 외부 공개 문서에 불필요 |
+| 디렉토리 구조 제거 | CLAUDE.md §4에 이미 정의, 외부 독자에게 유용하지 않음 |
+| 신규 섹션 구성 | 학술·기술 문서 표준 4개 섹션으로 확정 (개요 / 내용 및 방법 / 결과 및 의의 / 한계 및 미진사항) |
 
 ### 2.10. 10차 세션 — CLAUDE.md 구조 개편 및 개조식 원칙 전면 적용
 

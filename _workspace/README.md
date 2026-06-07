@@ -3,7 +3,7 @@
 이 문서는 AI CLI 와 함께 사용하는 범용 워크스페이스 템플릿의 목적, 구조, 사용법을 설명한다.
 
 > 생성일시: 260605-202038
-> 수정일시: 260606-115806
+> 수정일시: 260607-075346
 > 주제: Development Environment and Tools
 
 **목차**
@@ -47,6 +47,7 @@ project-root/
 ├── CLAUDE.md
 ├── AGENTS.md
 ├── _workspace/
+│   ├── README.md           # 이 파일
 │   ├── commands/
 │   ├── docs/
 │   ├── rules/
@@ -69,8 +70,9 @@ project-root/
 | `CLAUDE.md` | Claude Code 용 AI CLI 운영 지침 |
 | `AGENTS.md` | Codex 용 AI CLI 운영 지침 |
 | `_workspace/` | 워크스페이스 운영 문서, 명령어, 규칙, 세션 기록 보관 |
-| `_workspace/commands/` | `/session-handoff`, `/commit-message` 같은 커스텀 명령어 정의 |
-| `_workspace/docs/` | 워크스페이스 자체의 사용법, 운영 문서, 프로젝트 대시보드 보관. `workspace-readme.md` 는 워크스페이스 템플릿 자체에 대한 소개 문서 |
+| `_workspace/README.md` | 이 문서 — 워크스페이스 목적, 구조, 사용법 안내 |
+| `_workspace/commands/` | `session-handoff`, `commit-message` 같은 커스텀 명령어 정의 |
+| `_workspace/docs/` | 워크스페이스 운영 문서 및 프로젝트 대시보드 보관 |
 | `_workspace/rules/` | 문서 작성 스타일 등 공통 규칙 보관 |
 | `_workspace/sessions/` | 세션 종료 시 작성하는 핸드오프 문서 보관 |
 | `_assets/` | 원본 입력 자료 보관소 |
@@ -90,7 +92,7 @@ project-root/
 6. 처리 스크립트는 `scripts/` 에 작성한다.
 7. 생성된 중간 산출물이나 결과물은 `outputs/` 에 저장한다.
 8. 최종 문서에 포함할 내용은 `docs/contents/` 아래에 정리한다.
-9. 세션 종료 전 필요한 경우 `/session-handoff` 명령어로 다음 세션 인수인계 문서를 작성한다.
+9. 세션 종료 전 필요한 경우 `session-handoff 실행` 으로 다음 세션 인수인계 문서를 작성한다.
 
 기본 데이터 흐름은 다음과 같다.
 
@@ -155,7 +157,7 @@ docs/
 ## 7. 주제 분류 체계
 
 워크스페이스에서 작성하는 문서, 스크립트, 산출물은 공통 subject 분류를 기준으로 분류한다.
-분류 목록, 세부 항목, 활용 방법은 `_workspace/rules/subject-classification.md` 를 참조한다.
+분류 목록, 세부 항목, 활용 방법은 `_workspace/rules/subjects.md` 를 참조한다.
 
 ## 8. 사용 시 주의사항
 
