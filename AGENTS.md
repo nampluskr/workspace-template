@@ -2,6 +2,7 @@
 
 이 파일은 AI CLI 가 워크스페이스에서 작업할 때 따르는 운영 지침이다.
 프로젝트 내용 및 진행 사항은 `_project/PROJECT.md` 와 `_project/PROJECT-TODO.md` 를 참조한다.
+완료된 Task 의 상세 진행 이력은 `_project/PROJECT-HISTORY.md` 를 참조한다.
 
 다른 AI CLI 사용 시 이 파일을 복사하여 해당 CLI 의 지침 파일명으로 rename 한다.
 - Claude: CLAUDE.md
@@ -10,7 +11,7 @@
 - RooCode: ROO.md
 
 > 생성일시: 260605-195326
-> 수정일시: 260607-140000
+> 수정일시: 260607-135135
 > 주제: Development Environment and Tools
 
 **목차**
@@ -100,6 +101,9 @@ project-root/
 │   ├── rules/                  # 공통 규칙
 │   └── sessions/               # 세션 핸드오프 문서
 ├── _assets/                    # 바이너리 읽기 전용 입력 보관소
+├── _guides/                    # 워크스페이스 공통 도구 사용가이드
+│   ├── GUIDES.md               # 가이드 문서 인덱스
+│   └── docs/                   # 개별 가이드 문서
 │
 ├── legacy/                     # 참고·보완용 레거시 문서 및 코드
 ├── scripts/                    # 실행 스크립트 및 Python 파일
@@ -146,6 +150,7 @@ project-root/
 | `_project/commands/` | 커스텀 명령어 정의 파일 | `{파일명} 실행` 또는 `@{파일명.md} 실행` 형식으로 호출 |
 | `_project/rules/` | 공통 규칙 파일 | 문서 작성 스타일 등 |
 | `_assets/` | 읽기 전용 입력 보관소 | 참조만 가능, 수정/가공 금지 |
+| `_guides/` | 워크스페이스 공통 도구 사용가이드 | 프로젝트와 무관하게 유지 |
 | `legacy/` | 이전 버전 문서 및 리팩토링 대상 레거시 코드 | 수정·가공 허용 (`_assets/` 와 달리 편집 가능) |
 | `scripts/` | 실행 스크립트 및 Python 파일 | 문서 생성 스크립트 포함 |
 | `outputs/` | 프로젝트 산출물 | 하위 구조는 프로젝트별 추가 |

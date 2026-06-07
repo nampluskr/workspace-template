@@ -4,7 +4,7 @@
 문서 작성, 파일명, 태그, frontmatter 키워드를 결정할 때 이 분류를 기준으로 삼는다.
 
 > 생성일시: 260605-220755
-> 수정일시: 260607-160000
+> 수정일시: 260607-185246
 > 주제: Development Environment and Tools
 
 **목차**
@@ -167,25 +167,45 @@ Data Structures와 Algorithms는 효율적인 프로그램 작성의 기초로, 
 
 ### 3.8. [DEV] Development Environment and Tools
 
-개발 환경과 도구는 실제 작업 생산성을 직접 결정하는 분야다. Git과 GitHub는 버전 관리와 협업 워크플로우(branch strategy, pull request, CI)를 다루며, VSCode는 에디터 확장, 원격 터널(VSCode Tunnel), 단축키 등 개발 환경 최적화를 다룬다.
+개발 환경과 도구는 실제 작업 생산성을 직접 결정하는 분야다. 실행 환경 구성, 버전 관리, 에디터 설정, 문서화 도구, 지식 관리 및 AI 보조 도구의 5개 그룹으로 세분한다.
 
-문서화 도구로는 Jupyter Book v2(MyST Markdown 기반 웹북 생성), Markdown, LaTeX를 다룬다. 지식 관리 측면에서는 Obsidian과 PARA / Second Brain 방법론을 포함한다.
+#### Environment Setup
 
-실행 환경 구성에서는 Anaconda 기반 Python 환경, C++ 빌드 환경, CUDA GPU 환경, WSL(Windows Subsystem for Linux) 설정을 다룬다. AI CLI Tools는 Claude Code, Codex 등 AI 보조 도구의 활용과 설정을 포함한다.
+Anaconda 기반 Python 환경, C++ 빌드 환경, CUDA GPU 환경, WSL 설정, Windows 네이티브 환경 구성을 다룬다. 이 그룹은 다른 모든 그룹의 선결 조건이 된다.
 
-- Git
-- GitHub: Development Process / Branch Strategy
-- VSCode: Tips / Extensions / VSCode Tunnel
-- Jupyter Book (version 1 vs. 2)
-- Markdown
-- LaTeX
-- Obsidian
-- PARA / Second Brain
-- Python Environment
+- Python Environment (Anaconda / conda)
 - C++ Environment
 - CUDA Environment
 - WSL / Anaconda
 - Windows Development Environment
+
+#### Version Control
+
+Git 명령·워크플로우와 GitHub 협업 전략(branch strategy, pull request, CI)을 다룬다.
+
+- Git
+- GitHub: Development Process / Branch Strategy
+
+#### Editor and IDE
+
+VSCode 에디터의 확장 구성, 원격 터널(VSCode Tunnel), 단축키 등 개발 환경 최적화를 다룬다.
+
+- VSCode: Tips / Extensions / VSCode Tunnel
+
+#### Documentation Tools
+
+Jupyter Book v2(MyST Markdown 기반 웹북 생성), Markdown, LaTeX 등 기술 문서 작성 및 배포 도구를 다룬다.
+
+- Jupyter Book (version 1 vs. 2)
+- Markdown
+- LaTeX
+
+#### Knowledge Management and AI Tools
+
+Obsidian과 PARA / Second Brain 방법론을 통한 지식 체계화, Claude Code·Codex 등 AI CLI 보조 도구의 활용과 설정을 다룬다.
+
+- Obsidian
+- PARA / Second Brain
 - AI CLI Tools
 
 ### 3.9. [MISC] Miscellaneous

@@ -417,6 +417,29 @@ Figure 노트북은 Notes 페이지의 서브섹션으로 중첩한다.
     - file: lec-001_figures
 ```
 
+### 9.7. Admonition 블록
+
+참고 및 주의 사항은 일반 blockquote(`>`) 대신 MyST admonition 블록으로 표기한다. 자주 사용하는 유형은 다음과 같다.
+
+| 유형 | 용도 |
+|------|------|
+| `{note}` | 보충 설명, 참고 정보 |
+| `{warning}` | 주의 사항, 오류 유발 가능 내용 |
+| `{tip}` | 권장 사항, 유용한 팁 |
+| `{important}` | 반드시 숙지해야 할 핵심 사항 |
+
+사용 예시:
+
+````markdown
+```{note}
+Weierstrass M-test: 각 항의 절댓값이 수렴하는 급수로 bound 되면 균등수렴한다.
+```
+
+```{warning}
+Uniform Limit Theorem 적용 조건: 각 함수가 연속이어야 한다.
+```
+````
+
 ## 10. 참고문헌
 
 ### 10.1. 형식
