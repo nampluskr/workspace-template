@@ -1,14 +1,14 @@
-# 커스텀 명령어: `project-init`
+# 커스텀 명령어: `project-init` / `프로젝트 초기화`
 
 프로젝트 시작 시 또는 진행 중 `project-init 실행` 또는 `@project-init.md 실행` 으로 호출한다.
-사용자와 대화형으로 프로젝트 정보를 수집하여 PROJECT.md → TASKS.md → README.md 순으로 작성하거나 갱신한다.
+사용자와 대화형으로 프로젝트 정보를 수집하여 `_project/PROJECT.md` → `_project/TASKS.md` → `README.md` 순으로 작성하거나 갱신한다.
 
 ## 실행 모드 판단
 
-명령어 실행 시 먼저 PROJECT.md 존재 여부를 확인한다.
+명령어 실행 시 먼저 `_project/PROJECT.md` 존재 여부를 확인한다.
 
-- **신규 모드**: PROJECT.md 가 없거나 플레이스홀더({...}) 상태인 경우 → 전체 항목을 새로 수집하여 작성
-- **업데이트 모드**: PROJECT.md 에 실제 내용이 있는 경우 → 현재 값을 보여주며 변경할 항목만 수집하여 갱신
+- **신규 모드**: `_project/PROJECT.md` 가 없거나 플레이스홀더({...}) 상태인 경우 → 전체 항목을 새로 수집하여 작성
+- **업데이트 모드**: `_project/PROJECT.md` 에 실제 내용이 있는 경우 → 현재 값을 보여주며 변경할 항목만 수집하여 갱신
 
 ## 질문 절차
 
@@ -55,7 +55,7 @@ Stage 2 {Stage명}
 사용자 피드백을 반영하여 Stage/Phase 를 수정하고, "확인" 입력 시 다음 단계로 넘어간다.
 수정이 반복될 경우 매번 전체 구조를 다시 출력하여 현재 상태를 보여준다.
 
-진행 단계가 확정되면 AI CLI 가 각 Phase 에 맞는 Task 를 직접 작성하여 TASKS.md 초안을 생성한다.
+진행 단계가 확정되면 AI CLI 가 각 Phase 에 맞는 Task 를 직접 작성하여 `_project/TASKS.md` 초안을 생성한다.
 
 ## 확인 및 수정
 
@@ -93,7 +93,7 @@ Subject code: ...
 현재 워크스페이스 폴더 구조입니다.
 
 project-root/
-├── _workspace/         # 워크스페이스 운영 문서
+├── _project/         # 워크스페이스 운영 문서
 ├── _assets/            # 읽기 전용 입력 보관소
 ├── scripts/            # 실행 스크립트 및 Python 파일
 ├── outputs/            # 프로젝트 산출물
@@ -122,7 +122,7 @@ project-root/
 
 ### PROJECT.md
 
-`_workspace/rules/writing-style.md` 규칙을 준수하여 작성한다.
+`_project/rules/markdown-style.md` 규칙을 준수하여 작성한다.
 
 ```markdown
 # {프로젝트명}
@@ -213,8 +213,8 @@ Stage 및 Phase 구성은 PROJECT.md 의 단계 섹션을 기준으로 합니다
 완료되었습니다.
 
 작성된 파일:
-- PROJECT.md: 목적 / 배경 / 범위 / 제약 / {N}개 Stage
-- TASKS.md: {N}개 Stage, {M}개 Phase, {K}개 Task
+- _project/PROJECT.md: 목적 / 배경 / 범위 / 제약 / {N}개 Stage
+- _project/TASKS.md: {N}개 Stage, {M}개 Phase, {K}개 Task
 - README.md: 프로젝트명 / 설명 / 태그 갱신
 
 생성된 폴더: {폴더명1}/, {폴더명2}/   ← 추가 폴더가 없으면 이 항목 생략

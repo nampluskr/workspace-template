@@ -1,4 +1,4 @@
-# 커스텀 명령어: `project-status`
+# 커스텀 명령어: `project-status` / `프로젝트 상태`
 
 세션 중 언제든 `project-status 실행` 또는 `@project-status.md 실행` 으로 호출한다.
 TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최근 세션 요약을 출력한다.
@@ -8,7 +8,7 @@ TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최
 
 ### Step 1. TASKS.md 진행률 집계
 
-`TASKS.md` 를 읽어 아래 항목을 집계한다.
+`_project/TASKS.md` 를 읽어 아래 항목을 집계한다.
 
 - 전체 Task 수, 완료(`[x]`) 수, 미완료(`[ ]`) 수
 - 현재 위치: 미완료 항목이 있는 첫 번째 Stage·Phase
@@ -16,13 +16,13 @@ TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최
 
 ### Step 2. 미결 사항 확인
 
-`_workspace/sessions/` 에서 파일명 기준 가장 최신 핸드오프 파일을 찾아 "미결 사항" 또는 "미결·보류" 섹션을 추출한다.
+`_project/sessions/` 에서 파일명 기준 가장 최신 핸드오프 파일을 찾아 "미결 사항" 또는 "미결·보류" 섹션을 추출한다.
 
 - 해당 섹션이 없거나 파일이 존재하지 않으면 "없음" 으로 표시한다.
 
 ### Step 3. 최근 세션 요약
 
-`_workspace/docs/project-history.md` 의 변경 이력 요약 테이블에서 마지막 2개 행을 읽어 출력한다.
+`_project/docs/project-history.md` 의 변경 이력 요약 테이블에서 마지막 2개 행을 읽어 출력한다.
 
 - 파일이 없거나 테이블 행이 없으면 해당 항목을 생략한다.
 

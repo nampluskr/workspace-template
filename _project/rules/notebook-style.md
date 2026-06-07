@@ -1,4 +1,4 @@
-# Jupyter Notebook 코딩 스타일 가이드
+# Notebook 스타일 가이드
 
 Jupyter Book v2 배포를 목표로 하는 노트북 작성에 적용되는 문서 구조 및 코드 규칙이다.
 노트북 내 Python 코드 작성 규칙은 `coding-style-python.md`를 따른다.

@@ -1,4 +1,4 @@
-# 커스텀 명령어: `session-handoff`
+# 커스텀 명령어: `session-handoff` / `세션 핸드오프`
 
 세션 종료 전 `session-handoff 실행` 또는 `@session-handoff.md 실행` 으로 호출한다.
 이 파일은 명령어의 문서 템플릿 및 작성 원칙 참고용이다.
@@ -6,7 +6,7 @@
 ## 저장 위치
 
 ```
-_workspace/sessions/YYMMDD-HHMMSS_session-handoff.md
+_project/sessions/YYMMDD-HHMMSS_session-handoff.md
 ```
 
 파일 저장 전에 반드시 `date +%y%m%d-%H%M%S` 를 실행하여 실제 현재 시각을 확인하고 그 값을 파일명에 사용한다. 플레이스홀더(`HHMMSS`, `000000` 등)를 그대로 쓰는 것을 금지한다.
