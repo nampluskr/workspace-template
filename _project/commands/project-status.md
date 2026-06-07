@@ -1,14 +1,14 @@
 # 커스텀 명령어: `project-status` / `프로젝트 상태`
 
 세션 중 언제든 `project-status 실행` 또는 `@project-status.md 실행` 으로 호출한다.
-TASKS.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최근 세션 요약을 출력한다.
+PROJECT-TODO.md 진행률, 직전 핸드오프의 미결 사항, project-history.md 최근 세션 요약을 출력한다.
 어떤 파일도 수정하지 않는 읽기 전용 명령어이다.
 
 ## 실행 절차
 
-### Step 1. TASKS.md 진행률 집계
+### Step 1. PROJECT-TODO.md 진행률 집계
 
-`_project/TASKS.md` 를 읽어 아래 항목을 집계한다.
+`_project/PROJECT-TODO.md` 를 읽어 아래 항목을 집계한다.
 
 - 전체 Task 수, 완료(`[x]`) 수, 미완료(`[ ]`) 수
 - 현재 위치: 미완료 항목이 있는 첫 번째 Stage·Phase

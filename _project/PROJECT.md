@@ -39,7 +39,7 @@
 ## 5. 진행 단계
 
 {프로젝트의 전체 진행 단계를 Stage - Phase 수준까지 정의한다.
-상세 Task 및 진행 현황은 TASKS.md 에서 관리한다.}
+상세 Task 및 진행 현황은 PROJECT-TODO.md 에서 관리한다.}
 
 ### 5.1. Stage 1 {Stage명}
 

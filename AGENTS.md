@@ -1,7 +1,7 @@
 # 워크스페이스 가이드
 
 이 파일은 AI CLI 가 워크스페이스에서 작업할 때 따르는 운영 지침이다.
-프로젝트 내용 및 진행 사항은 `_project/PROJECT.md` 와 `_project/TASKS.md` 를 참조한다.
+프로젝트 내용 및 진행 사항은 `_project/PROJECT.md` 와 `_project/PROJECT-TODO.md` 를 참조한다.
 
 다른 AI CLI 사용 시 이 파일을 복사하여 해당 CLI 의 지침 파일명으로 rename 한다.
 - Claude: CLAUDE.md
@@ -93,7 +93,8 @@ project-root/
 │
 ├── _project/                   # 프로젝트 운영 관리
 │   ├── PROJECT.md              # 프로젝트 내부 명세
-│   ├── TASKS.md                # Stage-Phase-Task 진행 관리
+│   ├── PROJECT-TODO.md         # Stage-Phase-Task 진행 관리
+│   ├── PROJECT-HISTORY.md      # 완료 Task 상세 기록
 │   ├── commands/               # 커스텀 명령어 프롬프트
 │   ├── docs/                   # 운영 문서
 │   ├── rules/                  # 공통 규칙
@@ -120,7 +121,7 @@ project-root/
 | `CLAUDE.md` | Claude Code 용 AI CLI 운영 지침 (이 파일) |
 | `AGENTS.md` | Codex 용 AI CLI 운영 지침 — CLAUDE.md 와 동일 내용 유지 |
 | `_project/PROJECT.md` | 프로젝트의 목적, 배경, 범위, 제약 사항, 진행 단계를 정의하는 내부 명세 |
-| `_project/TASKS.md` | Stage-Phase-Task 단위의 진행 현황 관리 문서 |
+| `_project/PROJECT-TODO.md` | Stage-Phase-Task 단위의 진행 현황 관리 문서 |
 
 두 파일은 항상 동일한 내용을 유지한다. 공통 지침을 외부 파일에 두고 참조만 하는 방식도 검토했으나, AI CLI 는 CLAUDE.md 안에서 참조하는 외부 파일을 자동 로드하지 않으므로 각 파일에 직접 유지하는 현행 방식을 채택한다.
 
@@ -169,7 +170,7 @@ _assets/          →      scripts/       →      outputs/
 - 폴더명: 소문자, 하이픈 구분 (예: `chap01`, `session-handoff`)
 - 파일명: 단어 구분에 하이픈(`-`), 접두사·접미사 연결에 언더스코어(`_`)
 - 루트 레벨 MD 파일: 대문자 (예: `README.md`, `CLAUDE.md`)
-- 프로젝트 관리 MD 파일: 대문자 — 위치에 관계없이 적용 (예: `_project/PROJECT.md`, `_project/TASKS.md`)
+- 프로젝트 관리 MD 파일: 대문자 — 위치에 관계없이 적용 (예: `_project/PROJECT.md`, `_project/PROJECT-TODO.md`)
 - Python 파일: 소문자, 언더스코어 구분 (예: `train_model.py`)
 - 챕터 폴더: `chap01`, `chap02`, ... (두 자리 숫자, 0 패딩)
 - 세션 핸드오프 파일: `YYMMDD-HHMMSS_session-handoff.md`
@@ -192,7 +193,7 @@ _assets/          →      scripts/       →      outputs/
 
 작업을 시작하기 전에 수행하는 절차이다.
 
-- 작업 시작 전 `_project/PROJECT.md`, `_project/TASKS.md` 읽기 — 목적·범위·진행 상황 파악
+- 작업 시작 전 `_project/PROJECT.md`, `_project/PROJECT-TODO.md` 읽기 — 목적·범위·진행 상황 파악
 
 ### 7.2. 작업 중
 
@@ -206,7 +207,7 @@ _assets/          →      scripts/       →      outputs/
 
 작업 완료 후 수행하는 정리 절차이다.
 
-- 작업 완료 후 `_project/TASKS.md` 해당 Task 체크박스 완료 상태로 업데이트
+- 작업 완료 후 `_project/PROJECT-TODO.md` 해당 Task 체크박스 완료 상태로 업데이트
 - 필요한 경우 `session-end 실행` 으로 세션 종료 절차 수행
 
 ## 8. Jupyter Book v2
@@ -233,7 +234,7 @@ _assets/          →      scripts/       →      outputs/
 원본 자료와 핵심 파일을 보호하기 위한 제한 사항이다.
 
 - `_assets/` 내 파일 수정 및 삭제 금지
-- 루트 필수 파일 (`README.md`, `CLAUDE.md`, `AGENTS.md`) 및 프로젝트 관리 파일 (`_project/PROJECT.md`, `_project/TASKS.md`) 임의 삭제 금지
+- 루트 필수 파일 (`README.md`, `CLAUDE.md`, `AGENTS.md`) 및 프로젝트 관리 파일 (`_project/PROJECT.md`, `_project/PROJECT-TODO.md`) 임의 삭제 금지
 
 ### 9.2. 빌드 및 git 제한
 
@@ -268,12 +269,12 @@ project-init 실행
 
 | 명령어 | 한국어 명령 | 파일 | 수행 내용 |
 |--------|------------|------|-----------|
-| `session-start` | `세션 시작` | `commands/session-start.md` | 세션 시작 브리핑 — `_project/PROJECT.md` / `_project/TASKS.md` / 직전 핸드오프 읽기 후 현황 요약 출력 |
-| `session-end` | `세션 종료` | `commands/session-end.md` | 세션 종료 절차 — TASKS.md 업데이트, PROJECT-HISTORY.md 갱신, session-handoff 실행 |
+| `session-start` | `세션 시작` | `commands/session-start.md` | 세션 시작 브리핑 — `_project/PROJECT.md` / `_project/PROJECT-TODO.md` / 직전 핸드오프 읽기 후 현황 요약 출력 |
+| `session-end` | `세션 종료` | `commands/session-end.md` | 세션 종료 절차 — PROJECT-TODO.md 업데이트, PROJECT-HISTORY.md 갱신, session-handoff 실행 |
 | `session-handoff` | `세션 핸드오프` | `commands/session-handoff.md` | 세션 핸드오프 문서 작성 및 `_project/sessions/` 에 저장 |
-| `project-init` | `프로젝트 초기화` | `commands/project-init.md` | 대화형으로 프로젝트 정보 수집 후 `_project/PROJECT.md` → `_project/TASKS.md` → `README.md` 작성/갱신 |
-| `project-update` | `프로젝트 업데이트` | `commands/project-update.md` | 자유 형식으로 수정 내용 입력 → `_project/PROJECT.md` / `_project/TASKS.md` / `README.md` 선택적 갱신 |
-| `project-status` | `프로젝트 상태` | `commands/project-status.md` | TASKS.md 진행률, 미결 사항, PROJECT-HISTORY.md 최근 Task 요약 출력 (읽기 전용) |
+| `project-init` | `프로젝트 초기화` | `commands/project-init.md` | 대화형으로 프로젝트 정보 수집 후 `_project/PROJECT.md` → `_project/PROJECT-TODO.md` → `README.md` 작성/갱신 |
+| `project-update` | `프로젝트 업데이트` | `commands/project-update.md` | 자유 형식으로 수정 내용 입력 → `_project/PROJECT.md` / `_project/PROJECT-TODO.md` / `README.md` 선택적 갱신 |
+| `project-status` | `프로젝트 상태` | `commands/project-status.md` | PROJECT-TODO.md 진행률, 미결 사항, PROJECT-HISTORY.md 최근 Task 요약 출력 (읽기 전용) |
 | `commit-message` | `커밋 메시지` | `commands/commit-message.md` | git 변경사항 분석 후 커밋 메시지 제안 |
 
 ### 10.3. 명령어 추가

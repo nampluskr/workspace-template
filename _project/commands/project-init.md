@@ -1,7 +1,7 @@
 # 커스텀 명령어: `project-init` / `프로젝트 초기화`
 
 프로젝트 시작 시 또는 진행 중 `project-init 실행` 또는 `@project-init.md 실행` 으로 호출한다.
-사용자와 대화형으로 프로젝트 정보를 수집하여 `_project/PROJECT.md` → `_project/TASKS.md` → `README.md` 순으로 작성하거나 갱신한다.
+사용자와 대화형으로 프로젝트 정보를 수집하여 `_project/PROJECT.md` → `_project/PROJECT-TODO.md` → `README.md` 순으로 작성하거나 갱신한다.
 
 ## 실행 모드 판단
 
@@ -55,7 +55,7 @@ Stage 2 {Stage명}
 사용자 피드백을 반영하여 Stage/Phase 를 수정하고, "확인" 입력 시 다음 단계로 넘어간다.
 수정이 반복될 경우 매번 전체 구조를 다시 출력하여 현재 상태를 보여준다.
 
-진행 단계가 확정되면 AI CLI 가 각 Phase 에 맞는 Task 를 직접 작성하여 `_project/TASKS.md` 초안을 생성한다.
+진행 단계가 확정되면 AI CLI 가 각 Phase 에 맞는 Task 를 직접 작성하여 `_project/PROJECT-TODO.md` 초안을 생성한다.
 
 ## 확인 및 수정
 
@@ -169,7 +169,7 @@ project-root/
 - Phase 2.1 {Phase명}
 ```
 
-### TASKS.md
+### PROJECT-TODO.md
 
 ```markdown
 # 작업 목록
@@ -214,10 +214,10 @@ Stage 및 Phase 구성은 PROJECT.md 의 단계 섹션을 기준으로 합니다
 
 작성된 파일:
 - _project/PROJECT.md: 목적 / 배경 / 범위 / 제약 / {N}개 Stage
-- _project/TASKS.md: {N}개 Stage, {M}개 Phase, {K}개 Task
+- _project/PROJECT-TODO.md: {N}개 Stage, {M}개 Phase, {K}개 Task
 - README.md: 프로젝트명 / 설명 / 태그 갱신
 
 생성된 폴더: {폴더명1}/, {폴더명2}/   ← 추가 폴더가 없으면 이 항목 생략
 
-다음 단계: TASKS.md 의 Stage 1 Phase 1.1 부터 작업을 시작하세요.
+다음 단계: PROJECT-TODO.md 의 Stage 1 Phase 1.1 부터 작업을 시작하세요.
 ```
